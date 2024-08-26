@@ -1,0 +1,64 @@
+@import "../../../app/styles/common/mixins";
+
+$Input-Initial-Placeholder: #6f91bc;
+$Input-Initial-Value: #4a4e71;
+$Input-Initial-Border: #ffffff;
+$Input-Initial-Fill: #ffffff;
+$Input-Focused-Value: #4a4e71;
+$Input-Focused-Border: #6f91bc;
+$Input-Error-Value: #ff8080;
+$Input-Error-Border: #ff8080;
+$Input-Success-Value: #27b274;
+$Input-Success-Border: #27b274;
+
+.v-input {
+  width: 100%;
+  position: relative;
+
+  &.--state {
+    &-success {
+      .v-input__field {
+        color: $Input-Success-Value;
+        border-color: $Input-Success-Border;
+      }
+    }
+
+    &-error {
+      .v-input__field {
+        color: $Input-Error-Value;
+        border-color: $Input-Error-Border;
+      }
+    }
+  }
+
+  &__field {
+    width: 100%;
+    height: rem(48px);
+    box-sizing: border-box;
+    border-radius: rem(10px);
+    padding: rem(0 48px 0 20px);
+    background: $Input-Initial-Fill;
+    color: $Input-Initial-Value;
+    border: rem(1px solid $Input-Initial-Border);
+    outline: none;
+    transition: all 0.3s ease;
+
+    &::placeholder {
+      color: $Input-Initial-Placeholder;
+    }
+
+    &:focus {
+      border-color: $Input-Focused-Border;
+    }
+  }
+
+  &__password {
+    &-icon {
+      position: absolute;
+      right: rem(20px);
+      top: 50%;
+      margin-top: rem(-12px);
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import "../../../app/styles/common/mixins";
+
+.the-form {
+  width: 100%;
+  max-width: rem(560px);
+  box-sizing: border-box;
+  padding: rem(30px);
+  margin: 0 auto;
+  position: relative;
+
+  &__header,
+  &__footer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__content {
+    margin: rem(40px 0);
+  }
+
+  &__bg {
+    position: absolute;
+    top: rem(-25%);
+    left: 50%;
+    margin: rem(0 0 0 -124.64px);
+    width: rem(249.28px);
+    height: rem(718.28px);
+    background: url(~@/shared/assets/images/bg_stars.webp) center / contain no-repeat;
+  }
+}
