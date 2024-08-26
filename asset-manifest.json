@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/clario-react-form/static/css/main.44cc1b9d.css",
-    "main.js": "/clario-react-form/static/js/main.8af6a105.js",
+    "main.js": "/clario-react-form/static/js/main.3819eca2.js",
     "static/media/bg_stars.webp": "/clario-react-form/static/media/bg_stars.1fec212ebaa2b3f92017.webp",
     "index.html": "/clario-react-form/index.html",
     "main.44cc1b9d.css.map": "/clario-react-form/static/css/main.44cc1b9d.css.map",
-    "main.8af6a105.js.map": "/clario-react-form/static/js/main.8af6a105.js.map"
+    "main.3819eca2.js.map": "/clario-react-form/static/js/main.3819eca2.js.map"
   },
   "entrypoints": [
     "static/css/main.44cc1b9d.css",
-    "static/js/main.8af6a105.js"
+    "static/js/main.3819eca2.js"
   ]
 }
