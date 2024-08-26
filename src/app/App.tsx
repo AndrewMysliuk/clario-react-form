@@ -3,7 +3,7 @@ import AppRouter from "@/app/router/AppRouter"
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/clario-react-form">
       <AppRouter />
     </BrowserRouter>
   )

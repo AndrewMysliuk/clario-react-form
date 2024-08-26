@@ -6,34 +6,22 @@ import { RouteNames } from "@/shared/types"
 
 const AppRouter = () => {
   const { isLogged } = useTypedSelector((state) => state.common)
-
   const { checkUserLogin } = useActions()
 
   useEffect(() => {
     checkUserLogin()
   }, [checkUserLogin, isLogged])
 
-  return isLogged ? (
+  return (
     <div className="app">
       <div className="wrap">
         <Routes>
-          {privateRoutes.map((route) => (
-            <Route path={route.path} element={<route.element />} key={route.path} />
-          ))}
-
-          <Route path="*" element={<Navigate to={RouteNames.HOME} />} />
+          {isLogged
+            ? privateRoutes.map((route) => <Route path={route.path} element={<route.element />} key={route.path} />)
+            : publicRoutes.map((route) => <Route path={route.path} element={<route.element />} key={route.path} />)}
+          <Route path="*" element={<Navigate to={isLogged ? RouteNames.HOME : RouteNames.LOGIN} />} />
         </Routes>
       </div>
-    </div>
-  ) : (
-    <div className="app">
-      <Routes>
-        {publicRoutes.map((route) => (
-          <Route path={route.path} element={<route.element />} key={route.path} />
-        ))}
-
-        <Route path="*" element={<Navigate to={RouteNames.LOGIN} />} />
-      </Routes>
     </div>
   )
 }
